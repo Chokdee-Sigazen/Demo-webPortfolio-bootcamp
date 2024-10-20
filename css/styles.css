@@ -16,7 +16,8 @@ body {
     margin-left: 40px;
     margin-top:20px;
     margin-right:40px;
-    overflow: hidden;
+    position: relative;
+    z-index: -2;
 }
 
 .high-light{
@@ -98,7 +99,7 @@ nav ul li a.active {
     justify-content: space-between;
     padding: 1rem 4rem;
     height: calc(100vh - 80px);
-    position : relative;
+    position: relative;
     z-index: 1;
 }
 
@@ -208,24 +209,22 @@ nav ul li a.active {
     color: var(--accent-color);
 }
 
-.cursor {
-    display: inline-block;
-    width: 3px;
-    background-color: var(--light-text);
-    margin-left: 0.1rem;
+.cursur-mouse{
+    background-color: white;
     animation: blink 0.7s infinite;
+
 }
 
-.cursor.typing {
+@keyframes blink{
+    0% {background-color: white;}
+    49% {background-color:white;}
+    50% {background-color: var(--bg);}
+    99% {background-color: var(--bg)}
+    100% {background-color: var(--bg);}
+}
+
+.typing{
     animation: none;
-}
-
-@keyframes blink {
-    0%  { background-color: var(--light-text); }
-    49% { background-color: var(--light-text); }
-    50% { background-color: transparent; }
-    99% { background-color: transparent; }
-    100%  { background-color: var(--light-text); }
 }
 
 /************************************/

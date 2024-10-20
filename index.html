@@ -8,7 +8,7 @@
     
 </head>
 <body>
-    <div id="particles-js"></div>
+    <div id="particles-js"></div> 
     <header>
         <nav>
             <div class="logo">Portfolio.</div>
@@ -23,10 +23,10 @@
     </header>
     <main>
         <div class=" home-content" id="home">
-            <div class="intro-text">
+            <div id="text-profile" class="intro-text">
                 <h2>Hello, It's Me</h2>
-                <h1>Chokdee​ Devcommu</h1>
-                <h3>And I'm a <span class="typed-text">Developer</span></h3>
+                <h1 id="myname">Chokdee Devcommu</h1>
+                <h3>And I'm a <span id="typed" class="typed-text"></span><span id="cursor" class="cursur-mouse"  >.</span></h3>
                 <p>This site create by using <span class="highlight">HTML CSS and JS</span></p>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -34,7 +34,8 @@
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
-                <button class="download-cv">Download CV</button>
+
+                <button onclick="AddText()" class="download-cv">Download CV</button>
             </div>
             <div class="profile-image" >
                 <img src="./images/me.png" alt="me">
@@ -42,5 +43,12 @@
         </div>
         
     </main>
+    <script src="./js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function() {
+            console.log('particles.js loaded');
+        });
+    </script>
 </body>
 </html>
